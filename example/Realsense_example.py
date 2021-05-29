@@ -22,10 +22,10 @@ config.enable_stream(rs.stream.color, 640,480, rs.format.bgr8, 30)
 profile = pipeline.start(config)
 color_stream = profile.get_stream(rs.stream.color).as_video_stream_profile()
 i = color_stream.get_intrinsics()
-fx = i.fx/2
-fy = i.fy/2
-cx = i.ppx/2
-cy = i.ppy/2
+fx = i.fx
+fy = i.fy
+cx = i.ppx
+cy = i.ppy
 coeffs = i.coeffs
 
 updatefile = []
@@ -90,9 +90,6 @@ try:
 
         depth_image = np.asarray(depth_frame.get_data())
         color_image = np.asarray(color_frame.get_data())
-
-        color_image = cv2.resize(color_image,(320,240))
-        depth_image = cv2.resize(depth_image,(320,240))
 
         dt = time.time() - old_dt
         old_dt += dt
