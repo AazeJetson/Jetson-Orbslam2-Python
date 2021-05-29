@@ -148,7 +148,7 @@ offsetdt = time.time()
 
 while True:
     _, img = cap.read()
-    dt = time.time()
+    dt = time.time() - offsetdt
     offsetdt += dt
 
     rotationPoseMatrix = slam.process_image_mono(img, dt*1000)
