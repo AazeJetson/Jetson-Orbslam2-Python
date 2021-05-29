@@ -282,28 +282,6 @@ Define the type of the process with the settings file, vocabulary and the type o
 
     return the number of features who match with the reference frame
 
-### save_settings_file :
-
-    function for setting the path and name of the settings file. 
-
-### save_settings :
-
-    function for saving the settings
-
-### load_settings :
-
-    function for loading in the fly the settings
-
-### set_mode :
-  
-    function for changing the mode of the siam in the fly
-	
-        orbslam2.Sensor.MONOCULAR
-
-        orbslam2.Sensor.STEREO
-
-        orbslam2.Sensor.RGBD
-
 ### SaveMap :
 
     function for saving the map
