@@ -171,7 +171,7 @@ slam.shutdown()
 cv2.destroyAllWindows()
 ```
 
-The library work well in monocular and rgbd but in stereo the performance (20 fps with 640x480 frame) is really poor.
+The library work well (20 fps with 640x480 frame) in monocular and rgbd but in stereo the performanc is really poor.
 
 In the 2 example script you have everything for a basic usage of the library.
  
