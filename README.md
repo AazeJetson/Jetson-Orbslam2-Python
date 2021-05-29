@@ -1,7 +1,7 @@
 # ORB-SLAM2-PYTHON-GPU-RGBD
 
-This is a package of modified libraries and script used to make orbslam2 full python binding.
-This was tested on fresh jetpack 4.5.1 install
+This package combine modified libraries and script used to make orbslam2 cuda/rgbd easy to use with python.
+This package was tested on fresh jetpack 4.5.1 install.
 
 Each original license and name tag is kept in each package. If somethings was forgetten dont hesitate to advice me for making the expected change.
 
@@ -123,7 +123,7 @@ and a yaml setting file like the 2 in the example directory
 csi_cam.yaml : for the monocular version
 rgbd_real_sense.yaml : for the rgbd version
 
-Basic python script example:
+### Basic python script example:
 
 ```
 import cv2
