@@ -200,7 +200,7 @@ Define the type of the process with the settings file, vocabulary and the type o
 
 	where the 3 first cols is a rotation matrix (3x3) who represente the orientation and the last cols is the coordinates in his own reference as the monocular can't calcute well the distance.
 
-###process_image_stereo :
+### process_image_stereo :
 
     function used to feed the process with 2 frame from a stereo camera
 
@@ -208,7 +208,7 @@ Define the type of the process with the settings file, vocabulary and the type o
 
     where the 3 first cols is a rotation matrix (3x3) who represente the orientation and the last cols is the world coordinate.
 
-###process_image_rgbd :
+### process_image_rgbd :
 
     function used to feed the process with a frame and it depth frame.
 
@@ -216,43 +216,43 @@ Define the type of the process with the settings file, vocabulary and the type o
 
     where the 3 first cols is a rotation matrix (3x3) who represente the orientation and the last cols is the world coordinates.
 
-###shutdown :
+### shutdown :
 
     function used to close cleanely the process
 
-###is_running :
+### is_running :
 
     function who return a boolean if the process is running or not.
 
-###reset :
+### reset :
 
     function for reseting the map
 
-###set_use_viewer :
+### set_use_viewer :
 
     funtion used to set if the viewer will be shown or not (if set to false you'll save some ressource)
 
-###get_keyframe_points :
+### get_keyframe_points :
 
     function to get the cloud of point used in the current frame
 
-###get_quaternion :
+### get_quaternion :
 
     return the orientation in form of quaternion 
 
-###get_euler :
+### get_euler :
 
     return the orientation in radians
 
-###get_pose :
+### get_pose :
 
     return pose coordinate.
 
-###get_tracked_mappoints :
+### get_tracked_mappoints :
 
     return mappoints who are preloaded for the slam process
 
-###get_tracking_state :
+### get_tracking_state :
 
     return state of the process.
 
@@ -267,35 +267,35 @@ Define the type of the process with the settings file, vocabulary and the type o
         orblsam2.TrackingState.LOST
 
 
-###get_map_point :
+### get_map_point :
 
     return all map point
 
-###get_reference_point :
+### get_reference_point :
 
     return reference point
 
-###get_num_features :
+### get_num_features :
 
     return the number of features find in the frame
 
-###get_num_matched_features :
+### get_num_matched_features :
 
     return the number of features who match with the reference frame
 
-###save_settings_file :
+### save_settings_file :
 
     function for setting the path and name of the settings file. 
 
-###save_settings :
+### save_settings :
 
     function for saving the settings
 
-###load_settings :
+### load_settings :
 
     function for loading in the fly the settings
 
-###set_mode :
+### set_mode :
   
     function for changing the mode of the siam in the fly
 	
@@ -305,13 +305,13 @@ Define the type of the process with the settings file, vocabulary and the type o
 
         orbslam2.Sensor.RGBD
 
-###SaveMap :
+### SaveMap :
 
     function for saving the map
 
         orbslam2.SaveMap("path_of_file/namefile.map")
 
-###LoadMap :
+### LoadMap :
 
     function for preloading map after the system was set and before the process is initialized 
 	orbslam2.LoadMap("path_of_the_file/namefile.map")
