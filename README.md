@@ -89,9 +89,9 @@ sudo make install
 before installing the python binding we nned to add one line in the bashrc
 ```
 gedit ~/.bashrc
-```
 At the end of the file add :
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+```
 
 then:
 ```
