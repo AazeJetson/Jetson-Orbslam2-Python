@@ -9,7 +9,7 @@ os.chdir("..")
 path = os.getcwd()
 
 mapname = "MapRGBD.map"
-vocab_path = f"{path}/ORB-SLAM2-GPU-RGBD-PYTHON/Vocabulary/ORBvoc.txt"
+vocab_path = f"{path}/ORB-SLAM2-GPU-RGBD-PYTHON/Vocabulary/ORBvoc.txt" #this file need to be untar before
 settings_path = f"{path}/example/rgbd_real_sense.yaml"
 
 pipeline = rs.pipeline()
