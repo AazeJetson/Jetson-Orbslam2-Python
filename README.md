@@ -1,6 +1,7 @@
 # ORB-SLAM2-PYTHON-GPU-RGBD
 
-This is a package of modified libraries and script used to make orbslam2 compatible with python.
+This is a package of modified libraries and script used to make orbslam2 full python binding.
+This was tested on fresh jetpack 4.5.1 install
 
 Each original license and name tag is kept in each package. If somethings was forgetten dont hesitate to advice me for making the expected change.
 
@@ -174,26 +175,30 @@ The library work well in monocular and rgbd but in stereo the performance is rea
 about 20 fps with 640x480 frame.
 
 In the 2 example script you have everything for a basic usage of the library.
+ 
+## To do
+
+	add function to switch between localization only and mapping state. 
 
 ## list of function
 
-###System :
+### System :
 
 Define the type of the process with the settings file, vocabulary and the type of sensor
 
-orbslam2.System(vocfile, settingfile, orbslam2.Sensor.MONOCULAR or orbslam2.Sensor.STEREO or orbslam2.Sensor.RGBD)
+	orbslam2.System(vocfile, settingfile, orbslam2.Sensor.MONOCULAR or orbslam2.Sensor.STEREO or orbslam2.Sensor.RGBD)
 
-###initialize : 
+### initialize : 
+	
+	slam.initialize()
 
-    Start the slam process
+### process_image_mono :
 
-###process_image_mono :
+	function used to feed the process with monocular frame
 
-    function used to feed the process with monocular frame
+	the function return a rotation-translation matrix (3x4)
 
-    the function return a rotation-translation matrix (3x4)
-
-    where the 3 first cols is a rotation matrix (3x3) who represente the orientation and the last cols is the coordinates in his own reference as the monocular can't calcute well the distance.
+	where the 3 first cols is a rotation matrix (3x3) who represente the orientation and the last cols is the coordinates in his own reference as the monocular can't calcute well the distance.
 
 ###process_image_stereo :
 
